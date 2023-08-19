@@ -1,0 +1,23 @@
+p{
+	background-color: skyblue;
+	font-size: 30px;
+	color: red;
+	text-align: center;
+}
+
+div{
+	height: 100px;
+	width: 100px;
+	background-color: palegreen;
+	color: darkred;
+	text-align: center;
+	font-size: 30px;
+	font-style:italic;
+	font-family: cursive;
+}
+
+*{
+	font-size: 45px;
+	font-family: serif;
+	color: green;
+}

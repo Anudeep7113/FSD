@@ -1,0 +1,16 @@
+#external{
+	border: 5px solid red;
+	background-color: palegoldenrod;
+	font-size: 25px;
+	font-family: cursive;
+	color: darkred;
+	text-align: center;
+}
+
+#xyz{
+	height: 300px;
+	width: 500px;
+	border-radius: 400px;
+	border: 20px solid skyblue;
+
+}

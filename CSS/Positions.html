@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Positions in CSS</title>
+	<style type="text/css">
+		.a{
+			height: 300px;
+			width: 300px;
+			float: left;
+			background-color: cyan;
+			position: static;
+			top: 1400px;
+			left: 300px;
+			
+		}
+		.b{
+			height: 300px;
+			width: 300px;
+			float: left;
+			background-color: purple;
+			position: relative;
+			top: 1000px;
+			left: 200px;
+		}
+		.c1{
+			height: 600px;
+			width: 600px;
+			float: left;
+			outline: 2px solid red;
+		}
+		.c{
+			height: 300px;
+			width: 300px;
+			float: left;
+			background-color: pink;
+			position: absolute;
+			top: 60px;
+			left: 60px;
+		}
+		.d{
+			height: 300px;
+			width: 300px;
+			float: left;
+			background-color: olive;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="a"> <h5> Static </h5> </div>
+
+	<div class="b"> <h5> Relative </h5></div>
+
+	<div class="c1"> 
+
+		<div class="c"> <h5> Absolute </h5></div>
+
+	</div>
+
+	<div class="d"> <h5> Fixed </h5> </div>
+</body>
+</html>

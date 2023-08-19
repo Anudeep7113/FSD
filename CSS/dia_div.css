@@ -1,0 +1,9 @@
+.diamond {
+  width: 500px;
+  height: 300px;
+  background-color: pink;
+  border-style: dotted;
+  border-width: 10px;
+  border-color: red;
+
+}

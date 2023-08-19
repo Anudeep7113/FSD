@@ -1,0 +1,19 @@
+.aaa{
+	background-image: url(BG.jpg);
+	background-size: cover;
+}
+
+.bbb{
+	background-image: url(BG2.jpg);
+	background-size: cover;
+}
+
+#ccc{
+	background-image: url(BG3.jpg);
+	background-size: cover;
+}
+
+#ddd{
+	background-image: url(BG4.jpg);
+	background-size: cover;
+}

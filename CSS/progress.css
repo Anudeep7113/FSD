@@ -1,0 +1,16 @@
+/* The outer container */
+.progress-bar {
+  width: 300px;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* The inner container representing the progress */
+.progress {
+  height: 100%;
+  background-color: #4caf50; /* Green color for the progress */
+  width: 20%; /* The initial progress is 0% */
+  transition: width 0.3s; /* Optional: Adds a smooth animation to the progress change */
+}

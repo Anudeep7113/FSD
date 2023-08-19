@@ -1,0 +1,37 @@
+body{
+	background-color: yellow;
+	text-align: center;
+}
+
+input[type]{
+	background-color: cyan;
+	color: darkred;
+	font-size: 20px;
+}
+
+input[type="text"]{
+	background-color: cyan;
+	color: darkred;
+	font-size: 20px;
+}
+
+input[type="number"]{
+	background-color: pink;
+	color: darkblue;
+	font-size: 20px;
+}
+
+a[href]{
+	color: maroon;
+	font-size: 25px;
+	background-color: lightskyblue;
+}
+
+div[style]{
+	height: 200px;
+	width: 400px;
+	color: floralwhite;
+	background-color: purple;
+	font-size: 20px;
+}
+
