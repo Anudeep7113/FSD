@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        #game-container {
+            margin-top: 125px;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+        }
+
+        #player-points {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+        }
+
+        #computer-points {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+        }
+
+        .choice {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .choice:hover {
+            background-color: gold;
+        }
+
+        #game-result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #aaa{
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body id="aaa">
+    <div id="player-points">Player: 0</div>
+    <div id="computer-points">Computer: 0</div>
+    <div id="game-container">
+        <div>
+            <img src="rock.png" alt="Rock" id="rock-image">
+            <img src="paper.png" alt="Paper" id="paper-image">
+            <img src="scissors.png" alt="Scissors" id="scissors-image">
+        </div>
+        <div>
+            <button class="choice" id="rock">Rock</button>
+            <button class="choice" id="paper">Paper</button>
+            <button class="choice" id="scissors">Scissors</button>
+        </div>
+    </div>
+    <div id="game-result"></div>
+
+    <script>
+        let playerScore = 0;
+        let computerScore = 0;
+        const playerPointsElement = document.getElementById("player-points");
+        const computerPointsElement = document.getElementById("computer-points");
+        const gameResultElement = document.getElementById("game-result");
+
+        // Function to generate a random choice for the computer
+        function computerChoice() {
+            const choices = ["rock", "paper", "scissors"];
+            const randomIndex = Math.floor(Math.random() * 3);
+            return choices[randomIndex];
+        }
+
+        // Function to determine the winner
+        function determineWinner(playerChoice, computerChoice) {
+            if (playerChoice === computerChoice) {
+                return "It's a tie!";
+            } else if (
+                (playerChoice === "rock" && computerChoice === "scissors") ||
+                (playerChoice === "paper" && computerChoice === "rock") ||
+                (playerChoice === "scissors" && computerChoice === "paper")
+            ) {
+                playerScore++;
+                return "You win!";
+            } else {
+                computerScore++;
+                return "Computer wins!";
+            }
+        }
+
+        // Function to update the points display
+        function updatePoints() {
+            playerPointsElement.textContent = `Player: ${playerScore}`;
+            computerPointsElement.textContent = `Computer: ${computerScore}`;
+        }
+
+        // Function to update the result text
+        function updateResultText(result) {
+            gameResultElement.textContent = result;
+        }
+
+        // Function to handle player's choice
+        function playerChoiceHandler(playerChoice) {
+            const computer = computerChoice();
+            const result = determineWinner(playerChoice, computer);
+            updatePoints();
+            updateResultText(`You chose ${playerChoice}. Computer chose ${computer}. ${result}`);
+        }
+
+        // Event listeners for the choice buttons
+        const choices = document.querySelectorAll(".choice");
+        choices.forEach(choice => {
+            choice.addEventListener("click", () => {
+                playerChoiceHandler(choice.id);
+            });
+        });
+    </script>
+</body>
+</html>
